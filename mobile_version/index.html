@@ -9,7 +9,6 @@
 </head>
 <body>
   <main class="app">
-    <aside class="side">
     <h1>할 일 관리</h1>
 
     <section class="progress" aria-label="진행률">
@@ -56,12 +55,9 @@
       </select>
       <button type="submit">추가</button>
     </form>
-    </aside>
 
-    <section class="content" aria-label="할 일 목록">
-      <ul class="todo-list" id="todo-list"></ul>
-      <p class="empty" id="empty" hidden>할 일을 추가해 보세요.</p>
-    </section>
+    <ul class="todo-list" id="todo-list"></ul>
+    <p class="empty" id="empty" hidden>할 일을 추가해 보세요.</p>
   </main>
   <script src="app.js"></script>
 </body>

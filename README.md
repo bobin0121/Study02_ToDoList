@@ -5,8 +5,13 @@
 
 ## 실행 방법
 
-- 배포 주소: https://bobin0121.github.io/Study02_ToDoList/
+- 데스크톱 버전(2단 레이아웃): https://bobin0121.github.io/Study02_ToDoList/
+- 모바일 버전(1단 레이아웃): https://bobin0121.github.io/Study02_ToDoList/mobile_version/
 - 로컬 실행: `index.html` 을 브라우저에서 열면 바로 실행됩니다. 서버와 설치는 필요 없습니다.
+
+## 파일 구성
+
+두 버전은 자바스크립트(`app.js`)가 같고 HTML과 CSS만 다릅니다. 두 버전은 같은 주소(origin)에서 제공되므로 `localStorage` 의 할 일 데이터를 함께 씁니다.
 
 ## 알려진 제약
 
