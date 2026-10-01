@@ -1,0 +1,64 @@
+<!-- 생성: 2026-10-01 11:28 KST -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>할 일 관리</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>할 일 관리</h1>
+
+    <section class="progress" aria-label="진행률">
+      <div class="progress-row total" data-key="total">
+        <div class="progress-head">
+          <span class="progress-name">전체</span>
+          <span class="progress-count">0 / 0</span>
+          <span class="progress-percent">0%</span>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="progress-row cat-work" data-key="work">
+        <div class="progress-head">
+          <span class="progress-name">업무</span>
+          <span class="progress-count">0 / 0</span>
+          <span class="progress-percent">0%</span>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="progress-row cat-personal" data-key="personal">
+        <div class="progress-head">
+          <span class="progress-name">개인</span>
+          <span class="progress-count">0 / 0</span>
+          <span class="progress-percent">0%</span>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+      <div class="progress-row cat-study" data-key="study">
+        <div class="progress-head">
+          <span class="progress-name">공부</span>
+          <span class="progress-count">0 / 0</span>
+          <span class="progress-percent">0%</span>
+        </div>
+        <div class="bar"><span></span></div>
+      </div>
+    </section>
+
+    <form class="add-form" id="add-form">
+      <input type="text" id="add-text" maxlength="100" placeholder="할 일을 입력하세요" aria-label="할 일 내용" autocomplete="off">
+      <select id="add-category" aria-label="카테고리">
+        <option value="work">업무</option>
+        <option value="personal">개인</option>
+        <option value="study">공부</option>
+      </select>
+      <button type="submit">추가</button>
+    </form>
+
+    <ul class="todo-list" id="todo-list"></ul>
+    <p class="empty" id="empty" hidden>할 일을 추가해 보세요.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

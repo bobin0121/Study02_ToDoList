@@ -1,0 +1,90 @@
+/* 생성: 2026-10-01 11:28 KST */
+:root {
+  --work: #3b6fd4;
+  --personal: #d4813b;
+  --study: #2f9e6b;
+  --total: #555;
+  --border: #dcdcdc;
+  --muted: #999;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Malgun Gothic", system-ui, sans-serif;
+  background: #f5f6f8;
+  color: #222;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h1 { margin: 0 0 16px; font-size: 24px; }
+
+.progress {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.progress-row { --color: var(--total); margin: 8px 0; }
+.progress-row.cat-work { --color: var(--work); }
+.progress-row.cat-personal { --color: var(--personal); }
+.progress-row.cat-study { --color: var(--study); }
+
+.progress-head { display: flex; gap: 8px; font-size: 14px; margin-bottom: 4px; }
+.progress-name { font-weight: bold; color: var(--color); flex: 1; }
+.progress-percent { min-width: 40px; text-align: right; }
+
+.bar { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; }
+.bar span { display: block; height: 100%; width: 0; background: var(--color); transition: width 0.2s; }
+
+.add-form { display: flex; gap: 8px; margin-bottom: 16px; }
+.add-form input { flex: 1; }
+input[type="text"], select, button {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+button { cursor: pointer; white-space: nowrap; }
+button:hover { background: #f0f0f0; }
+.add-form button { background: #333; color: #fff; border-color: #333; }
+.add-form button:hover { background: #111; }
+
+.todo-list { list-style: none; margin: 0; padding: 0; }
+
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+}
+.todo .text { flex: 1; word-break: break-all; cursor: text; }
+.todo.done .text { text-decoration: line-through; color: var(--muted); }
+.todo.done .label { opacity: 0.5; }
+.todo input[type="text"] { flex: 1; min-width: 0; }
+
+.label {
+  font-size: 12px;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.label.work { background: var(--work); }
+.label.personal { background: var(--personal); }
+.label.study { background: var(--study); }
+
+.empty { text-align: center; color: var(--muted); margin-top: 32px; }
